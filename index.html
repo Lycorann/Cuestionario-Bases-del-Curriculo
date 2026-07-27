@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bases del Currículo - Juego Didáctico</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>🎓 Bases del Currículo</h1>
+    <p>Juego Didáctico Educativo</p>
+</header>
+
+
+<main class="container">
+
+
+    <!-- PANTALLA DE INICIO -->
+
+    <section id="inicio" class="pantalla activa">
+
+        <div class="card inicio-card">
+
+            <h2>Bienvenido al Juego</h2>
+
+            <p>
+                Pon a prueba tus conocimientos sobre las Bases del Currículo
+                mediante diferentes actividades interactivas.
+            </p>
+
+            <button id="btnIniciar">
+                Comenzar Juego
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MENU PRINCIPAL -->
+
+    <section id="menu" class="pantalla">
+
+        <h2>Actividades</h2>
+
+        <div class="menu-grid">
+
+
+            <button class="actividad-btn" data-juego="quiz">
+                📝
+                <span>Quiz</span>
+            </button>
+
+
+            <button class="actividad-btn" data-juego="emparejar">
+                🔗
+                <span>Emparejar</span>
+            </button>
+
+
+            <button class="actividad-btn" data-juego="ruleta">
+                🎡
+                <span>Ruleta</span>
+            </button>
+
+
+            <button class="actividad-btn" data-juego="vf">
+                ✅❌
+                <span>Verdadero o Falso</span>
+            </button>
+
+
+        </div>
+
+
+        <div class="puntaje-box">
+
+            <h3>Puntaje actual</h3>
+
+            <span id="puntajeActual">
+                0 / 40
+            </span>
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- QUIZ -->
+
+
+    <section id="quiz" class="pantalla juego">
+
+
+        <div class="card">
+
+
+            <h2>📝 Quiz</h2>
+
+
+            <div id="quizContenido">
+
+                <h3 id="preguntaQuiz">
+                    Pregunta
+                </h3>
+
+
+                <div id="opcionesQuiz">
+
+                </div>
+
+
+                <button id="siguienteQuiz">
+                    Siguiente
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- EMPAREJAR -->
+
+
+    <section id="emparejar" class="pantalla juego">
+
+
+        <div class="card">
+
+
+            <h2>🔗 Emparejar Conceptos</h2>
+
+
+            <p>
+                Une cada concepto con su definición correcta.
+            </p>
+
+
+
+            <div class="emparejar-area">
+
+
+                <div id="conceptos"
+                     class="columna">
+
+                </div>
+
+
+
+                <div id="definiciones"
+                     class="columna">
+
+                </div>
+
+
+            </div>
+
+
+
+            <button id="finalizarEmparejar">
+                Terminar
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- RULETA -->
+
+
+    <section id="ruleta" class="pantalla juego">
+
+        <div class="card">
+
+            <h2>🎡 Ruleta de Preguntas</h2>
+
+
+            <div class="ruleta-container">
+
+                <div id="ruletaCirculo">
+                    ?
+                </div>
+
+            </div>
+
+
+            <button id="girarRuleta">
+                Girar Ruleta
+            </button>
+
+
+            <div id="preguntaRuleta">
+
+            </div>
+
+
+            <div class="respuesta-manual">
+
+                <button id="correctaRuleta">
+                    ✔ Correcta
+                </button>
+
+
+                <button id="incorrectaRuleta">
+                    ✘ Incorrecta
+                </button>
+
+            </div>
+
+
+            <button id="salirRuleta">
+                ⬅ Salir
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <!-- VERDADERO Y FALSO -->
+
+
+    <section id="vf" class="pantalla juego">
+
+
+        <div class="card">
+
+
+            <h2>✅❌ Verdadero o Falso</h2>
+
+
+
+            <h3 id="preguntaVF">
+
+            </h3>
+
+
+
+            <div class="vf-buttons">
+
+
+                <button id="btnVerdadero">
+                    Verdadero
+                </button>
+
+
+                <button id="btnFalso">
+                    Falso
+                </button>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- RESULTADOS -->
+
+
+
+    <section id="resultado" class="pantalla">
+
+
+        <div class="card resultado-card">
+
+
+            <h2>
+                🏆 Resultado Final
+            </h2>
+
+
+
+            <div class="resultados">
+
+
+                <p>
+                    Quiz:
+                    <span id="resultadoQuiz">
+                        0
+                    </span>
+                </p>
+
+
+                <p>
+                    Emparejar:
+                    <span id="resultadoEmparejar">
+                        0
+                    </span>
+                </p>
+
+
+                <p>
+                    Ruleta:
+                    <span id="resultadoRuleta">
+                        0
+                    </span>
+                </p>
+
+
+                <p>
+                    Verdadero/Falso:
+                    <span id="resultadoVF">
+                        0
+                    </span>
+                </p>
+
+
+
+                <hr>
+
+
+                <h2>
+                    Total:
+                    <span id="resultadoTotal">
+                        0 / 40
+                    </span>
+                </h2>
+
+
+            </div>
+
+
+
+            <button id="reiniciarJuego">
+                Jugar nuevamente
+            </button>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Juego Didáctico - Bases del Currículo <br>
+        Jaime Emanuel Carrasco Condori & Juan Callisaya Huanaco
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
